@@ -1,228 +1,472 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- saved from url=(0054)https://ehall.scnu.edu.cn/infoplus/form/1962429/render -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>申请人确认 - 学生离校外出申请</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta name="keywords" content="InfoPlus">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta itemscope="csrfToken" content="lwF0Qnsy2AX2bzPCYEr4nJDOLOzPKnep">
+<meta name="theme-color" content="#4CAF50">
+<!-- disable phone number link in mobile safari -->
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" href="https://ehall.scnu.edu.cn/infoplus/static/img/favicon.png">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            perspective: 2000px;
-            background-color: #000;
-            transform-style: preserve-3d;
-        }
-        body::before {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 0;
-            height: 0;
-            background: url(img/1.png);
-            background: url(img/2.png);
-            background: url(img/3.png);
-            background: url(img/4.png);
-            background: url(img/5.png);
-            background: url(img/6.png);
-            background: url(img/01.png);
-            background: url(img/02.png);
-            background: url(img/03.png);
-            background: url(img/04.png);
-            background: url(img/05.png);
-            background: url(img/06.png);
-        }
-        
-        li {
-            list-style: none;
-        }
-        
-        .contain {
-            position: relative;
-            margin: 250px auto;
-            width: 300px;
-            height: 200px;
-            transform: rotateX(14deg);
-            transform-style: preserve-3d;
-        }
-        
-        .maxbox {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            transform-style: preserve-3d;
-            animation: rotate 7s linear infinite;
-        }
-        
-        .maxbox>li {
-            transition: all 0.5s ease;
-            opacity: .1;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            /* background: url(../../image/dog.jpg) no-repeat; */
-            background-size: 200px 200px;
-        }
-        
-        .maxbox>li:nth-child(1) {
-            background: url(img/1.png) no-repeat;
-            background-size: 200px 200px;
-            transform: translateZ(100px);
-        }
-        
-        .maxbox>li:nth-child(2) {
-            background: url(img/2.png) no-repeat;
-            background-size: 200px 200px;
-            transform: translateZ(-100px);
-        }
-        
-        .maxbox>li:nth-child(3) {
-            background: url(img/3.png) no-repeat;
-            background-size: 200px 200px;
-            transform: rotateY(90deg) translateZ(100px);
-        }
-        
-        .maxbox>li:nth-child(4) {
-            background: url(img/4.png) no-repeat;
-            background-size: 200px 200px;
-            transform: rotateY(-90deg) translateZ(100px);
-        }
-        
-        .maxbox>li:nth-child(5) {
-            background: url(img/5.png) no-repeat;
-            background-size: 200px 200px;
-            transform: rotateX(90deg) translateZ(100px);
-        }
-        
-        .maxbox>li:nth-child(6) {
-            background: url(img/6.png) no-repeat;
-            background-size: 200px 200px;
-            transform: rotateX(-90deg) translateZ(100px);
-        }
-        
-        .contain:hover .maxbox li:nth-child(1) {
-            transform: translateZ(200px);
-            opacity: 0.8;
-        }
-        
-        .contain:hover .maxbox li:nth-child(2) {
-            transform: translateZ(-200px);
-            opacity: 0.8;
-        }
-        
-        .contain:hover .maxbox li:nth-child(3) {
-            transform: rotateY(90deg) translateZ(200px);
-            opacity: 0.8;
-        }
-        
-        .contain:hover .maxbox li:nth-child(4) {
-            transform: rotateY(-90deg) translateZ(200px);
-            opacity: 0.8;
-        }
-        
-        .contain:hover .maxbox li:nth-child(5) {
-            transform: rotateX(90deg) translateZ(200px);
-            opacity: 0.8;
-        }
-        
-        .contain:hover .maxbox li:nth-child(6) {
-            transform: rotateX(-90deg) translateZ(200px);
-            opacity: 0.8;
-        }
-        
-        .minbox {
-            position: relative;
-            top: 40px;
-            left: 40px;
-            width: 100px;
-            height: 100px;
-            transform-style: preserve-3d;
-            animation: rotate 7s linear infinite;
-        }
-        
-        .minbox>li {
-            opacity: .7;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            /* background: url(../../image/pic.jpg) no-repeat; */
-        }
-        
-        .minbox>li:nth-child(1) {
-            background: url(img/01.png) no-repeat;
-            background-size: 100px 100px;
-            transform: rotate(0) translateZ(50px)
-        }
-        
-        .minbox>li:nth-child(2) {
-            background: url(img/02.png) no-repeat;
-            background-size: 100px 100px;
-            transform: rotate(0) translateZ(-50px);
-        }
-        
-        .minbox>li:nth-child(3) {
-            background: url(img/03.png) no-repeat;
-            background-size: 100px 100px;
-            transform: rotateY(90deg) translateZ(50px);
-        }
-        
-        .minbox>li:nth-child(4) {
-            background: url(img/04.png) no-repeat;
-            background-size: 100px 100px;
-            transform: rotateY(-90deg) translateZ(50px);
-        }
-        
-        .minbox>li:nth-child(5) {
-            background: url(img/05.png) no-repeat;
-            background-size: 100px 100px;
-            transform: rotateX(90deg) translateZ(50px);
-        }
-        
-        .minbox>li:nth-child(6) {
-            background: url(img/06.png) no-repeat;
-            background-size: 100px 100px;
-            transform: rotateX(-90deg) translateZ(50px);
-        }
-        
-        @keyframes rotate {
-            0% {
-                transform: rotateY(0deg);
-            }
-            100% {
-                transform: rotateY(360deg);
-            }
-        }
-    </style>
-</head>
+<link href="./申请人确认 - 学生离校外出申请_files/infoplus.css" rel="stylesheet">
+    <link href="./申请人确认 - 学生离校外出申请_files/theme.css" rel="stylesheet">
+    <link href="./申请人确认 - 学生离校外出申请_files/theme(1).css" rel="stylesheet">
+    <script type="text/javascript">
+        var initGlobalVariable = function () {
+            $$.PRINT = false;
+            $$.VIEWS_ONLY = false;
+            
+        };
 
+        var switchView = function () {
+            $("#div_loader_progress").animate({height: "0", opacity: 0.5}, 200, function () {
+                $("#div_loader").hide();
+                $("#div_render_container").show();
+
+                //触发全局表单可见事件，这里可以处理和表单中元素的高度、可见等相关的代码
+                $$.visible();
+            });
+        };
+    </script>
+<style>[autoheight]{overflow: hidden;  box-sizing: border-box;}</style><style type="text/css"></style><script src="./申请人确认 - 学生离校外出申请_files/render.min.js.下载"></script><script src="./申请人确认 - 学生离校外出申请_files/desktop.js.下载"></script><script src="./申请人确认 - 学生离校外出申请_files/desktop.js(1).下载"></script><style type="text/css" media="all" id="infoplus_view_8809_0_style"></style><link type="text/css" media="all" rel="stylesheet" id="infoplus_view_8809_0_cached_link" href="./申请人确认 - 学生离校外出申请_files/f.txt"></head>
 <body>
-    <div class="contain">
-        <ol class="maxbox">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ol>
-        <ul class="minbox">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+<div id="help_content"></div>
+<div id="div_loader" style="display: none;">
+    <div id="div_loader_content">
+        <div id="div_loader_text">
+            <span class="content">加载完成(100%)</span>
+        </div>
+        <div id="div_loader_progress" style="overflow: hidden; height: 0px; opacity: 0.5;">
+            <div id="div_loader_progress_percent" style="right: 0%;"></div>
+        </div>
     </div>
-    <audio src="告白之夜.mp3" loop="loop" autoplay="autoplay"></audio>
-</body>
+</div><div id="form_do_action_dialog" style="display:none;">
+    <div id="form_do_action_message_description" style="display:none;"></div>
+    <div id="form_do_action_show_remark" class="clearfix"></div>
+    <div id="form_do_action_remark_div">
+        <div id="form_do_action_remark_tip" style="margin-bottom:2px"></div>
+        <textarea id="form_do_action_remark" rows="5"></textarea>
+    </div>
+    <div id="form_do_action_next_steps">
+        <div id="form_do_action_show_next_steps" class="clearfix">
+            <span class="form_do_action_info ui-icon ui-icon-info"></span>
+            <span class="form_do_action_next_steps"></span>
+        </div>
+        <ul id="form_do_action_user_list"></ul>
+    </div>
+    <div style="height:10px"><a id="linkPrint" href="https://ehall.scnu.edu.cn/infoplus/form/1962429/render#" target="_blank"></a></div>
+</div>
 
-</html>
+
+<div id="div_render_container" style="display: block;">
+    <form id="renderForm">
+        <div id="div_content" class="div_content">
+            <div id="header_holder">
+        <div id="title_holder" class="complete"><div id="title_icon" class="title_icon"><i class="i-icon-menu"></i></div><div id="title_content" style="max-width: 1383px;"><nobr>学生离校外出申请:申请人确认(已完成)</nobr></div><div><div id="title_description" style="">流水号:679530,主管部门:学工部,研究生院</div><div id="title_description_short" style="display: none;">流水号:679530</div></div></div>
+        <!-- 1.form command bar -->
+        <div id="command_holder">
+            <div class="clear"></div>
+            <div id="command_bar_title_icon" class="title_icon complete" style="display: none;"><i class="i-icon-menu"></i></div><ul id="form_command_bar"><li class="tool_button"><a id="FormCommandPrint" class="tool_button disabled" href="https://ehall.scnu.edu.cn/infoplus/form/1962429/render#"><i class="i-icon-print"></i><p class="tool_button_p">打印</p><span class="toolbar_button_tip round-corner z-depth-1">本步骤不支持打印</span></a></li><li class="tool_button"><a id="FormCommandDownload" class="tool_button disabled" href="https://ehall.scnu.edu.cn/infoplus/form/1962429/render#"><i class="i-icon-cloud-download"></i><p class="tool_button_p">下载</p><span class="toolbar_button_tip round-corner z-depth-1">本步骤不支持下载</span></a></li><li class="tool_button hide" style="display: none;"><a id="FormCommandCompare" class="tool_button disabled" href="https://ehall.scnu.edu.cn/infoplus/form/1962429/render#"><i class="i-icon-my-library-books"></i><p class="tool_button_p"></p><span class="toolbar_button_tip round-corner z-depth-1">本步骤不支持数据对比</span></a></li><li class="no_action">此任务已处理,您无需任何操作</li><li class="command_menu btn-group hide" id="command_menu"><a class="command_button_content dropdown-toggle command_button_all" href="https://ehall.scnu.edu.cn/infoplus/form/1962429/render#" data-toggle="dropdown">所有操作... <span class="caret"></span></a><ul class="dropdown-menu" id="command_menu_dropdown"></ul><span class="alpha40 scroll_tip left" style="display: none;">点此区域按钮提交</span></li></ul>
+        </div>
+    </div>
+<div id="renderContent_holder" style=""><div id="nav_menu" style="display: none;"><ul class="nav_menu_group"><li id="nav_menu_history"><span class="menu_icon menu_icon_history"><i class="i-icon-history"></i></span><span class="menu_text">历史</span></li><li id="nav_menu_save"><span class="menu_icon menu_icon_save disabled"><i class="i-icon-save"></i></span><span class="menu_text">保存</span></li><li id="nav_menu_print"><span class="menu_icon menu_icon_print disabled"><i class="i-icon-print"></i></span><span class="menu_text">打印</span></li><li id="nav_menu_download"><span class="menu_icon menu_icon_download disabled"><i class="i-icon-cloud-download"></i></span><span class="menu_text">下载</span></li><li id="nav_menu_recover"><span class="menu_icon menu_icon_recover"><i class="i-icon-replay"></i></span><span class="menu_text">恢复提示</span></li><li id="nav_menu_instruction"><span class="menu_icon menu_icon_instruction"><i class="i-icon-local-library"></i></span><span class="menu_text">填表说明</span></li></ul><ul class="nav_menu_group"><li class="nav_menu_line"></li></ul><ul class="nav_menu_group"><li id="nav_menu_help"><span class="menu_icon menu_icon_help"><i class="i-icon-help"></i></span><span class="menu_text">帮助</span></li></ul></div>
+    <div id="form_milestone_holder" class="form_milestone_holder" style="visibility: visible;">
+            <div class="form_milestone_holder_wrap_outer shadow round-corner">
+                <div class="form_milestone_holder_wrap_inner" style="width: 920px;">
+                    <ul class="form_milestone_view"><li class="form_milestone_step green first" style="width: 125px;"><div class="floater green singleLine"></div><div class="content"><div class="content_name">填写申请</div><div class="milestone_tip round-corner z-depth-1 singleLine" style="left: 13.5px;">该步已完成</div></div></li><li class="form_milestone_step_arrow_li green"><div class="form_milestone_step_arrow_wrap"><div class="form_milestone_step_arrow green"></div><div class="form_milestone_step_arrow white"></div></div></li><li class="form_milestone_step green" style="width: 125px;"><div class="floater green singleLine"></div><div class="content"><div class="content_name">导师意见</div><div class="milestone_tip round-corner z-depth-1 singleLine" style="left: 13.5px;">该步已完成</div></div></li><li class="form_milestone_step_arrow_li green"><div class="form_milestone_step_arrow_wrap"><div class="form_milestone_step_arrow green"></div><div class="form_milestone_step_arrow white"></div></div></li><li class="form_milestone_step green" style="width: 141px;"><div class="floater green singleLine"></div><div class="content"><div class="content_name">辅导员意见</div><div class="milestone_tip round-corner z-depth-1 singleLine" style="left: 21.5px;">该步已完成</div></div></li><li class="form_milestone_step_arrow_li green"><div class="form_milestone_step_arrow_wrap"><div class="form_milestone_step_arrow green"></div><div class="form_milestone_step_arrow white"></div></div></li><li class="form_milestone_step green" style="width: 190px;"><div class="floater green singleLine"></div><div class="content"><div class="content_name">二级学院审核意见</div><div class="milestone_tip round-corner z-depth-1 singleLine" style="left: 46px;">该步已完成</div></div></li><li class="form_milestone_step_arrow_li green"><div class="form_milestone_step_arrow_wrap"><div class="form_milestone_step_arrow green"></div><div class="form_milestone_step_arrow white"></div></div></li><li class="form_milestone_step green" style="width: 141px;"><div class="floater green singleLine"></div><div class="content"><div class="content_name">申请人确认</div><div class="milestone_tip round-corner z-depth-1 singleLine" style="left: 21.5px;">该步已完成</div></div></li><li class="form_milestone_step_arrow_li green"><div class="form_milestone_step_arrow_wrap"><div class="form_milestone_step_arrow green"></div><div class="form_milestone_step_arrow white"></div></div></li><li class="form_milestone_step green last" style="width: 98px;"><div class="floater green singleLine"></div><div class="content"><div class="content_name">办结</div><div class="milestone_tip round-corner z-depth-1 singleLine" style="left: -3px;">该步已完成</div></div></li></ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    <!-- 2.the holder for form renderer -->
+    <div id="render_holder">
+        <div id="form_holder" style="display: block;"><div id="infoplus_view_8809_0" class="infoplus_view round-corner shadow"><div align="center"><table style="BORDER-TOP-STYLE: none; WORD-WRAP: break-word; BORDER-LEFT-STYLE: none; WIDTH: 900px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none" class="xdFormLayout"><colgroup><col width="900" style="WIDTH: 900px"></colgroup><tbody><tr class="xdTitleRow"><td class="xdTitleCell" style="BORDER-TOP: #bfbfbf 1pt; BORDER-RIGHT: #bfbfbf 1pt; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1pt; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; BORDER-LEFT: #bfbfbf 1pt; PADDING-RIGHT: 10px"><div align="left" style="MARGIN-TOP: 0px; LINE-HEIGHT: 1"><strong><font size="6" color="#385b83"><font size="6"><strong><font size="6" color="#385b83"><font size="6"></font></font></strong></font></font></strong></div><div align="left" style="MARGIN-TOP: 0px; LINE-HEIGHT: 1"><img border="0" src="./申请人确认 - 学生离校外出申请_files/AA991696.png" style="HEIGHT: 70px; WIDTH: 261px"></div><strong><font size="6" color="#385b83">学生离校外出申请</font></strong></td></tr><tr class="xdTableContentRow"><td class="xdTableContentCell" style="BORDER-TOP: #000000 1pt; BORDER-RIGHT: #bfbfbf 1pt; VERTICAL-ALIGN: top; BORDER-BOTTOM: #bfbfbf 1pt; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; BORDER-LEFT: #bfbfbf 1pt; PADDING-RIGHT: 10px"><div align="left"><table border="1" bordercolor="buttontext" style="WORD-WRAP: break-word; BORDER-TOP: medium none; BORDER-RIGHT: medium none; WIDTH: 875px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" class="xdLayout"><colgroup><col width="146" style="WIDTH: 146px"><col width="146" style="WIDTH: 146px"><col width="146" style="WIDTH: 146px"><col width="20" style="WIDTH: 20px"><col width="104" style="WIDTH: 104px"><col width="18" style="WIDTH: 18px"><col width="6" style="WIDTH: 6px"><col width="146" style="WIDTH: 146px"><col width="143" style="WIDTH: 143px"></colgroup><tbody><tr><td style="VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 10px"><div align="left" style="FONT-WEIGHT: normal"><font size="3">申请信息：</font></div></td><td style="VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 10px"><div align="center"><font size="3"><input type="hidden" style="WIDTH: 100%" class="infoplus_control infoplus_hiddenControl infoplus_fieldChange" title="" id="V1_CTRL148" name="fieldRYLXzd" readonly="" value=""></font></div></td><td style="VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 10px"><div align="center"><input type="hidden" style="WIDTH: 43px" class="infoplus_control infoplus_hiddenControl" title="" id="V1_CTRL96" name="fieldSHZTzd" readonly="" value="申请人确认办结"><input type="hidden" style="WIDTH: 26px" class="infoplus_control infoplus_hiddenControl" title="" id="V1_CTRL183" name="fieldH" readonly="" value="3"></div></td><td style="VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 10px" colspan="4"><div align="center"><font size="3">申请时间</font></div></td><td style="VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 10px" colspan="2"><div align="center" style="FONT-WEIGHT: normal"><div class="infoplus_labelControlContainer inline" id="label_1181fba5-12ae-4413-8c35-13aeedefb60d_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_1181fba5-12ae-4413-8c35-13aeedefb60d">2022-09-29</div><input type="hidden" id="V1_CTRL52" name="fieldSQSJzd" value="1664380800"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">学生类型</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div align="center"><input type="radio" value="1" style="FONT-SIZE: small" name="fieldRYLX" class="xdBehavior_Boolean infoplus_control infoplus_radioControl infoplus_readonly disabled checked infoplus_fieldChange" title="" id="V1_CTRL146" readonly="" disabled=""><label for="V1_CTRL146" class="infoplus_radioLabel"><font size="3">本科生&nbsp; </font></label><input type="radio" value="2" style="FONT-SIZE: small" name="fieldRYLX" class="xdBehavior_Boolean infoplus_control infoplus_radioControl infoplus_readonly disabled infoplus_fieldChange" title="" id="V1_CTRL147" readonly="" disabled=""><label for="V1_CTRL147" class="infoplus_radioLabel"><font size="3">研究生 &nbsp;</font></label><input type="radio" value="3" style="FONT-SIZE: small" name="fieldRYLX" class="xdBehavior_Boolean infoplus_control infoplus_radioControl infoplus_readonly disabled infoplus_fieldChange" title="" id="V1_CTRL149" readonly="" disabled=""><label for="V1_CTRL149" class="infoplus_radioLabel"><font size="3">预科生<font size="3">&nbsp; </font></font></label><font size="3"><font size="3"><input type="radio" value="4" name="fieldRYLX" class="xdBehavior_Boolean infoplus_control infoplus_radioControl infoplus_readonly disabled infoplus_fieldChange" title="" id="V1_CTRL189" readonly="" disabled=""><label for="V1_CTRL189" class="infoplus_radioLabel">计划外学生&nbsp; </label><input type="radio" value="5" name="fieldRYLX" class="xdBehavior_Boolean infoplus_control infoplus_radioControl infoplus_readonly disabled infoplus_fieldChange" title="" id="V1_CTRL190" readonly="" disabled=""><label for="V1_CTRL190" class="infoplus_radioLabel">自考生</label></font></font></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">姓名</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="2"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_0f7bd661-c3ae-466f-86ac-bcd97571dac9_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%; COLOR: #000000;" title="" class="infoplus_control infoplus_labelControl inline" id="label_0f7bd661-c3ae-466f-86ac-bcd97571dac9">郝世宽</div><input type="hidden" id="V1_CTRL1" name="fieldSQxm" value="2022024921"></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" colspan="4"><div align="center" style="FONT-WEIGHT: normal"><font size="3">学号</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="2"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_cf1c3a4b-2195-466b-9bba-23b3c1139b2b_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%; COLOR: #000000;" title="" class="infoplus_control infoplus_labelControl inline" id="label_cf1c3a4b-2195-466b-9bba-23b3c1139b2b">2022024921</div><input type="hidden" id="V1_CTRL2" name="fieldSQlxdh" value="2022024921"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">学院</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="2"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_bf7c3f01-ba4d-47b5-b5b9-fe092cd56afe_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%; COLOR: #000000;" title="" class="infoplus_control infoplus_labelControl inline" id="label_bf7c3f01-ba4d-47b5-b5b9-fe092cd56afe">人工智能学院</div><input type="hidden" id="V1_CTRL3" name="fieldSQdw" value="175" class="infoplus_fieldChange"></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" colspan="4"><div align="center"><font size="3">联系电话</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="2"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_9fb661c4-a94c-436b-a837-7bb19926bc93_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%; COLOR: #000000;" title="" class="infoplus_control infoplus_labelControl inline" id="label_9fb661c4-a94c-436b-a837-7bb19926bc93">15865088919</div><input type="hidden" id="V1_CTRL4" name="fieldSQdwszxq" value="15865088919"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">所在校区</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="2"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_074f3ecd-a27c-489b-b2c5-212a9b052f1d_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_074f3ecd-a27c-489b-b2c5-212a9b052f1d">佛山校区南海校园</div><input type="hidden" id="V1_CTRL144" name="fieldSZXQzd" value="3"></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" colspan="4"><div align="center" style="FONT-WEIGHT: normal"><font size="3">宿舍</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="2"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_c3f88004-88ee-4ebd-a286-af99c954c626_Container"><div style="FONT-SIZE: small; WIDTH: 100%" title="" class="infoplus_control infoplus_labelControl inline" id="label_c3f88004-88ee-4ebd-a286-af99c954c626">422A</div><input type="hidden" id="V1_CTRL95" name="fieldSSzd" value="422A"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3"><font size="3">年级</font></font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="2"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_0e78ac75-418e-4ff2-90cf-bd3e230fdf05_Container"><div style="FONT-SIZE: small; WIDTH: 100%" title="" class="infoplus_control infoplus_labelControl inline" id="label_0e78ac75-418e-4ff2-90cf-bd3e230fdf05">2022级</div><input type="hidden" id="V1_CTRL151" name="fieldSQnj" value="1"></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="6"><div align="center">&nbsp;</div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">辅导员</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="2"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_29d476c1-007c-4f5c-9521-712ddf225b59_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_29d476c1-007c-4f5c-9521-712ddf225b59">周裕权</div><input type="hidden" id="V1_CTRL53" name="fieldFDYzd" value="20219232"></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 0px; BACKGROUND-COLOR: #ffffff" colspan="6"><div align="center" style="FONT-WEIGHT: normal"><table border="1" bordercolor="buttontext" style="WORD-WRAP: break-word; BORDER-TOP: medium none; BORDER-RIGHT: medium none; WIDTH: 433px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" class="xdLayout"><colgroup><col width="144" style="WIDTH: 144px"><col width="289" style="WIDTH: 289px"></colgroup><tbody><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #000000 1pt solid; BORDER-RIGHT: #000000 1pt solid; BORDER-BOTTOM: #000000 1pt solid; BORDER-LEFT: #000000 1pt solid; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">导师</font></div></td><td style="BORDER-TOP: #000000 1pt solid; BORDER-RIGHT: #000000 1pt solid; BORDER-BOTTOM: #000000 1pt solid; BORDER-LEFT: #000000 1pt solid; PADDING-RIGHT: 1px"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_d60e6f62-5e13-49cb-ad16-de7b254cfa54_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_d60e6f62-5e13-49cb-ad16-de7b254cfa54"></div><input type="hidden" id="V1_CTRL60" name="fieldSQds" value=""></div></div></td></tr></tbody></table></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">外出原因类型</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div align="center"><font size="3"><input type="radio" value="5" style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑;" name="fieldQJLXzd" class="xdBehavior_Boolean infoplus_control infoplus_radioControl infoplus_readonly disabled checked infoplus_fieldChange" title="" id="V1_CTRL145" readonly="" disabled=""><label for="V1_CTRL145" class="infoplus_radioLabel">法定节假日&nbsp; </label></font><input type="radio" value="1" style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑;" name="fieldQJLXzd" class="xdBehavior_Boolean infoplus_control infoplus_radioControl infoplus_readonly disabled infoplus_fieldChange" title="" id="V1_CTRL42" readonly="" disabled=""><label for="V1_CTRL42" class="infoplus_radioLabel"><font size="3">因事&nbsp; </font></label><input type="radio" value="2" style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑;" name="fieldQJLXzd" class="xdBehavior_Boolean infoplus_control infoplus_radioControl infoplus_readonly disabled infoplus_fieldChange" title="" id="V1_CTRL43" readonly="" disabled=""><label for="V1_CTRL43" class="infoplus_radioLabel"><font size="3">因病&nbsp; </font></label><input type="radio" value="3" style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑;" name="fieldQJLXzd" class="xdBehavior_Boolean infoplus_control infoplus_radioControl infoplus_readonly disabled infoplus_fieldChange" title="" id="V1_CTRL44" readonly="" disabled=""><label for="V1_CTRL44" class="infoplus_radioLabel"><font size="3">实习&nbsp; </font></label><input type="radio" value="4" style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑;" name="fieldQJLXzd" class="xdBehavior_Boolean infoplus_control infoplus_radioControl infoplus_readonly disabled infoplus_fieldChange" title="" id="V1_CTRL45" readonly="" disabled=""><font size="3">走读&nbsp; <input type="radio" value="6" style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑;" name="fieldQJLXzd" class="xdBehavior_Boolean infoplus_control infoplus_radioControl infoplus_readonly disabled infoplus_fieldChange" title="" id="V1_CTRL150" readonly="" disabled=""><label for="V1_CTRL150" class="infoplus_radioLabel">寒暑假返乡</label></font></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">外出时间</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px" colspan="3"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_5c790623-7c05-46f4-bbde-164d9cd6ec1a_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_5c790623-7c05-46f4-bbde-164d9cd6ec1a">2022-09-30</div><input type="hidden" id="V1_CTRL46" name="fieldQJSJFrom" value="1664467200" class="infoplus_fieldChange"></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt; PADDING-RIGHT: 10px"><div align="center"><font size="3">至</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px" colspan="4"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_fa84967e-c269-4a48-b695-bb085d9ecf99_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_fa84967e-c269-4a48-b695-bb085d9ecf99">2022-10-08</div><input type="hidden" id="V1_CTRL47" name="fieldQJSJTo" value="1665158400" class="infoplus_fieldChange"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">外出天数</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_0ccbf2db-5562-46f3-9e32-519751eabde6_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_0ccbf2db-5562-46f3-9e32-519751eabde6">9</div><input type="hidden" id="V1_CTRL48" name="fieldQJTSzd" value="9"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">外出地点类别</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="2"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_ee8ea480-b5bb-4bc3-bf68-8f229f62caec_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_ee8ea480-b5bb-4bc3-bf68-8f229f62caec">市外(省内)</div><input type="hidden" id="V1_CTRL49" name="fieldMDDzd" value="2"></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" colspan="3"><div align="center" style="FONT-WEIGHT: normal"><font size="3">交通方式</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="3"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_495707e3-6944-4c8c-a4a8-90e8e00c5ab1_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_495707e3-6944-4c8c-a4a8-90e8e00c5ab1">市内交通</div><input type="hidden" id="V1_CTRL50" name="fieldJTFSzd" value="5"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div><font size="3" style="BACKGROUND-COLOR: #ffffff"></font><div align="center" style="FONT-WEIGHT: normal"><font size="3"></font>&nbsp;</div><div align="center" style="FONT-WEIGHT: normal"><font size="3">地址</font></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div align="center" id="groupJTDZlist" name="groupJTDZlist" class="infoplus_repeatParentElement"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_groupCount" id="fieldGroupJTDZlistCount921306" name="fieldGroupJTDZlistCount921306" value="1"><div class="xdRepeatingSection xdRepeating infoplus_repeatingSection" style="width: 708px;"><div widgetindex="0" align="left" style="MARGIN-BOTTOM: 0px; WIDTH: 708px;" title=""><div><table border="1" bordercolor="buttontext" style="WORD-WRAP: break-word; BORDER-TOP: medium none; BORDER-RIGHT: medium none; WIDTH: 695px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none" class="xdLayout"><colgroup><col width="114" style="WIDTH: 114px"><col width="115" style="WIDTH: 115px"><col width="116" style="WIDTH: 116px"><col width="115" style="WIDTH: 115px"><col width="117" style="WIDTH: 117px"><col width="118" style="WIDTH: 118px"></colgroup><tbody><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><font size="3" style="size: 3"></font><div align="center" style="FONT-WEIGHT: normal"><font size="3">省</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_c87099fb-5f71-424a-91aa-8c85e725c1a4_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_c87099fb-5f71-424a-91aa-8c85e725c1a4">广东省</div><input type="hidden" id="V1_CTRL62_0" name="fieldSQjtdzsheng_0" value="440000" class="infoplus_fieldChange"></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">市</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_ee1aff99-05d4-4328-9acc-e1bd2c45b648_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_ee1aff99-05d4-4328-9acc-e1bd2c45b648">广州市</div><input type="hidden" id="V1_CTRL63_0" name="fieldSQjtdzshi_0" value="440100" class="infoplus_fieldChange"></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">区</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_bbc756f6-8647-4428-ab5d-45035981957c_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_bbc756f6-8647-4428-ab5d-45035981957c">海珠区</div><input type="hidden" id="V1_CTRL64_0" name="fieldSQjtdzxianqu_0" value="440105"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center"><font size="3" style="BACKGROUND-COLOR: #dce9f5">具体地点</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="5"><div align="left"><div class="infoplus_labelControlContainer inline" id="label_6408cea6-a6e8-4b57-8413-b513e74f5e68_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_6408cea6-a6e8-4b57-8413-b513e74f5e68">琶洲街道黄埔村宾日大街</div><input type="hidden" id="V1_CTRL126_0" name="fieldSQjtdzjtdz_0" value="琶洲街道黄埔村宾日大街"></div></div></td></tr></tbody></table></div></div><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_rowIndex" id="fieldGroupJTDZlistRowIndex921306_0" name="fieldGroupJTDZlistRowIndex921306_0" value="0"><div class="infoplus_repeatSectionExpandButton infoplus_repeatSection_shrink opacity5" title="收起" style="display: none;"></div></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">紧急联系人</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="2"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_7ce8eb58-ebb1-4aa0-8639-da4ba21475ce_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_7ce8eb58-ebb1-4aa0-8639-da4ba21475ce">柏路路</div><input type="hidden" id="V1_CTRL66" name="fieldSQjjlxr" value="柏路路"></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" colspan="3"><div align="center" style="FONT-WEIGHT: normal"><font size="3">联系人电话</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="3"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_300a5b2f-866a-414c-a384-d704ccce7aee_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_300a5b2f-866a-414c-a384-d704ccce7aee">15865088919</div><input type="hidden" id="V1_CTRL67" name="fieldSQjjlxrdh" value="15865088919"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">事由</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div align="left"><div class="infoplus_labelControlContainer" id="label_57c3d96b-3b51-49ac-90e6-c28972245816_Container"><div style="font-size: small; font-family: &quot;PingFang SC&quot;, 微软雅黑; width: 100%; min-height: 50px;" title="" class="infoplus_control infoplus_labelControl" id="label_57c3d96b-3b51-49ac-90e6-c28972245816">探亲</div><input type="hidden" id="V1_CTRL51" name="fieldSYzd" value="探亲"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">粤康码</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div align="center"><div style="font-size: small; font-family: &quot;PingFang SC&quot;, 微软雅黑; width: 100%;" title="" class="infoplus_control infoplus_fileControl" id="file_6e047555-8174-40b2-82e9-ca9255e991ef"><div class="display" style=""><a target="_blank" href="https://ehall.scnu.edu.cn/file/ca641bf4-2685-46d6-8637-c6e529bf9789" class="infoplus_fileControl_link" title="Screenshot_2022-09-29-15-18-25-951_com.tencent.mm.jpg 创建于2022-09-29 15:43:21"><div class="uploadFileName" style="max-width: 356px;">Screenshot_2022-09-29-15-18-25-951_com.tencent.mm.jpg</div><div class="uploadFileSize">(851.8K)</div></a><div id="d2bc384d-fd84-4cd4-b4ef-44d198f5564b" class="infoplus_popMenu top left" style="display: none;"><ul class="horz"><li id="d2bc384d-fd84-4cd4-b4ef-44d198f5564b_preview" class="infoplus_popMenuItem horz" style="display: none;"><span class="infoplus_popMenuItemIcon"><i class="i-icon-search2"></i></span><span class="infoplus_popMenuItemText">预览</span></li><li id="d2bc384d-fd84-4cd4-b4ef-44d198f5564b_download" class="infoplus_popMenuItem horz"><a id="d2bc384d-fd84-4cd4-b4ef-44d198f5564b_download_link" href="https://ehall.scnu.edu.cn/file/ca641bf4-2685-46d6-8637-c6e529bf9789" target="_blank"><span class="infoplus_popMenuItemIcon"><i class="i-icon-cloud-download"></i></span><span class="infoplus_popMenuItemText">下载</span></a></li></ul></div></div><input type="hidden" id="V1_CTRL99" name="fieldYKMzd" value="ca641bf4-2685-46d6-8637-c6e529bf9789"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">行程卡</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div align="center"><div style="font-size: small; font-family: &quot;PingFang SC&quot;, 微软雅黑; width: 100%;" title="" class="infoplus_control infoplus_fileControl" id="file_cb6d09db-a1c4-4a34-8d76-25244c5c0c38"><div class="display" style=""><a target="_blank" href="https://ehall.scnu.edu.cn/file/cafeaea0-7e39-47c1-bfa6-88fb55f4a028" class="infoplus_fileControl_link" title="Screenshot_2022-09-29-15-18-41-456_com.tencent.mm.jpg 创建于2022-09-29 15:43:30"><div class="uploadFileName" style="max-width: 356px;">Screenshot_2022-09-29-15-18-41-456_com.tencent.mm.jpg</div><div class="uploadFileSize">(512.2K)</div></a><div id="ede4d187-274f-4d20-8584-cf9b3416f331" class="infoplus_popMenu top left" style="display: none;"><ul class="horz"><li id="ede4d187-274f-4d20-8584-cf9b3416f331_preview" class="infoplus_popMenuItem horz" style="display: none;"><span class="infoplus_popMenuItemIcon"><i class="i-icon-search2"></i></span><span class="infoplus_popMenuItemText">预览</span></li><li id="ede4d187-274f-4d20-8584-cf9b3416f331_download" class="infoplus_popMenuItem horz"><a id="ede4d187-274f-4d20-8584-cf9b3416f331_download_link" href="https://ehall.scnu.edu.cn/file/cafeaea0-7e39-47c1-bfa6-88fb55f4a028" target="_blank"><span class="infoplus_popMenuItemIcon"><i class="i-icon-cloud-download"></i></span><span class="infoplus_popMenuItemText">下载</span></a></li></ul></div></div><input type="hidden" id="V1_CTRL100" name="fieldXCKzd" value="cafeaea0-7e39-47c1-bfa6-88fb55f4a028"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">近3次外出 </font></div><div align="center" style="FONT-WEIGHT: normal"><font size="3">记录</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div id="groupJSCQJJLlist" name="groupJSCQJJLlist" class="infoplus_repeatParentElement"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_groupCount" id="fieldGroupJSCQJJLlistCount921306" name="fieldGroupJSCQJJLlistCount921306" value="0"></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="9"><div><font face="微软雅黑" size="3" style="font-family:&#39;PingFang SC&#39;,微软雅黑">提示：后续你可通过网上办事大厅查看本流程审批进程（进行中事项）和审批结果（待提交事项），敬请留意。</font></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt; PADDING-RIGHT: 10px; BACKGROUND-COLOR: transparent" colspan="9"><div align="left"><font size="3">外出审批信息：</font><input type="hidden" style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; COLOR: #000000;" class="infoplus_control infoplus_hiddenControl" title="" id="V1_CTRL18" name="fieldHidden" readonly="" value=""></div></td></tr><tr class="fake"><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: top; padding: 0px; background-color: rgb(255, 255, 255);" colspan="8"></td></tr><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" rowspan="2"><div align="center" style="FONT-WEIGHT: normal"><font size="3">导师意见</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div align="left" style="FONT-WEIGHT: normal"><font size="3"><div class="infoplus_labelControlContainer" id="label_dfb8357d-e5f9-46b1-a415-87e61ff5448c_Container"><div style="width: 100%; min-height: 50px;" title="" class="infoplus_control infoplus_labelControl" id="label_dfb8357d-e5f9-46b1-a415-87e61ff5448c"></div><input type="hidden" id="V1_CTRL68" name="fieldSHdsyj" value=""></div></font></div></td></tr><tr class="fake"><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);" class="fake"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: top; padding: 0px; background-color: rgb(255, 255, 255);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(255, 255, 255);" colspan="4"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(255, 255, 255);"></td></tr><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" rowspan="1" class="fake"><div align="center" style="FONT-WEIGHT: normal"><font size="3">导师意见</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff"><div align="left" style="FONT-WEIGHT: normal"><font size="3"><input type="hidden" style="WIDTH: 100%" class="infoplus_control infoplus_hiddenControl" title="" id="V1_CTRL101" name="fieldSHdsyczd" readonly="" value=""></font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">审核人</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="4"><div align="center" style="FONT-WEIGHT: normal"><div class="infoplus_labelControlContainer inline" id="label_c3c238f9-65fb-44b8-9a2b-6a8617c8e732_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_c3c238f9-65fb-44b8-9a2b-6a8617c8e732"></div><input type="hidden" id="V1_CTRL69" name="fieldSHdsyjr" value=""></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">审核日期</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff"><div align="center" style="FONT-WEIGHT: normal"><div class="infoplus_labelControlContainer inline" id="label_0057ad04-a8ab-42bd-b248-748a682027f4_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_0057ad04-a8ab-42bd-b248-748a682027f4"></div><input type="hidden" id="V1_CTRL70" name="fieldSHdsyjsj" value="" class="infoplus_fieldChange"></div></div></td></tr><tr class="fake"><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: top; padding: 0px; background-color: rgb(255, 255, 255);" colspan="8"></td></tr><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" rowspan="2"><div align="center" style="FONT-WEIGHT: normal"><font size="3">辅导员意见</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div align="left" style="FONT-WEIGHT: normal"><font size="3"><div class="infoplus_labelControlContainer" id="label_845e9e98-7d69-442d-8819-877e3ad439a4_Container"><div style="width: 100%; min-height: 50px;" title="" class="infoplus_control infoplus_labelControl" id="label_845e9e98-7d69-442d-8819-877e3ad439a4"></div><input type="hidden" id="V1_CTRL159" name="fieldSHyksfdyyj" value=""></div></font></div></td></tr><tr class="fake"><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);" class="fake"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: top; padding: 0px; background-color: rgb(255, 255, 255);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(255, 255, 255);" colspan="4"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(255, 255, 255);"></td></tr><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" rowspan="1" class="fake"><div align="center" style="FONT-WEIGHT: normal"><font size="3">辅导员意见</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff"><div align="left" style="FONT-WEIGHT: normal"><font size="3"><input type="hidden" style="WIDTH: 100%" class="infoplus_control infoplus_hiddenControl" title="" id="V1_CTRL162" name="fieldYCyksfdyyj" readonly="" value=""></font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">审核人</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="4"><div align="center" style="FONT-WEIGHT: normal"><div class="infoplus_labelControlContainer inline" id="label_e33ce7ac-f2cc-4d78-97ff-6081d455676c_Container"><div style="FONT-SIZE: small; WIDTH: 100%" title="" class="infoplus_control infoplus_labelControl inline" id="label_e33ce7ac-f2cc-4d78-97ff-6081d455676c"></div><input type="hidden" id="V1_CTRL160" name="fieldSHyksfdyyjr" value=""></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">审核日期</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff"><div align="center" style="FONT-WEIGHT: normal"><div class="infoplus_labelControlContainer inline" id="label_9822a891-0725-4cf0-a362-80878cf6a99e_Container"><div style="FONT-SIZE: small; WIDTH: 100%" title="" class="infoplus_control infoplus_labelControl inline" id="label_9822a891-0725-4cf0-a362-80878cf6a99e"></div><input type="hidden" id="V1_CTRL161" name="fieldSHyksfdyyjsj" value="" class="infoplus_fieldChange"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" rowspan="2"><div align="center" style="FONT-WEIGHT: normal"><font size="3">辅导员意见</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div align="left" style="FONT-WEIGHT: normal"><div class="infoplus_labelControlContainer" id="label_a645de93-aeb5-4838-8432-6346ed65e06e_Container"><div style="font-size: small; font-family: &quot;PingFang SC&quot;, 微软雅黑; width: 100%; color: rgb(0, 0, 0); min-height: 50px;" title="" class="infoplus_control infoplus_labelControl" id="label_a645de93-aeb5-4838-8432-6346ed65e06e">同意</div><input type="hidden" id="V1_CTRL15" name="fieldSZDWFZRyj" value="同意"></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px"><div align="center" style="FONT-WEIGHT: normal"><font size="3"><input type="hidden" style="WIDTH: 100%" class="infoplus_control infoplus_hiddenControl" title="" id="V1_CTRL102" name="fieldSZDWFZRyczd" readonly="" value=""></font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">审核人</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px" colspan="4"><font color="#ff0000"><div align="center" style="FONT-WEIGHT: normal"><div class="infoplus_labelControlContainer inline" id="label_d9135dda-4f98-47d6-b93c-be20b9119cb5_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%; COLOR: #000000;" title="" class="infoplus_control infoplus_labelControl inline" id="label_d9135dda-4f98-47d6-b93c-be20b9119cb5">周裕权</div><input type="hidden" id="V1_CTRL16" name="fieldSZDWFZRshr" value="20219232"></div></div></font></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">审核日期</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px"><font color="#ff0000"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_7c094be5-f0f5-4deb-97e1-234b265ef172_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%; COLOR: #000000;" title="" class="infoplus_control infoplus_labelControl inline" id="label_7c094be5-f0f5-4deb-97e1-234b265ef172">2022-09-30</div><input type="hidden" id="V1_CTRL17" name="fieldSZDWFZRshsj" value="1664467200" class="infoplus_fieldChange"></div></div></font></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" rowspan="2"><div align="center" style="FONT-WEIGHT: normal"><font size="3">学院意见</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px" colspan="8"><div align="left" style="FONT-WEIGHT: normal"><div class="infoplus_labelControlContainer" id="label_c613a104-2090-4efc-9493-b1e2da2f8788_Container"><div style="font-size: small; font-family: &quot;PingFang SC&quot;, 微软雅黑; width: 100%; color: rgb(0, 0, 0); min-height: 50px;" title="" class="infoplus_control infoplus_labelControl" id="label_c613a104-2090-4efc-9493-b1e2da2f8788"></div><input type="hidden" id="V1_CTRL19" name="fieldFGLXXLDyj" value=""></div></div></td></tr><tr><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff"><div align="center" style="FONT-WEIGHT: normal"><font size="3"><input type="hidden" style="WIDTH: 100%" class="infoplus_control infoplus_hiddenControl" title="" id="V1_CTRL103" name="fieldFGLXXLDyczd" readonly="" value=""></font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">审核人</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="4"><font color="#ff0000"><div align="center" style="FONT-WEIGHT: normal"><div class="infoplus_labelControlContainer inline" id="label_07f18d33-ca4c-4c51-bde9-b8a60ea0439c_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%; COLOR: #000000;" title="" class="infoplus_control infoplus_labelControl inline" id="label_07f18d33-ca4c-4c51-bde9-b8a60ea0439c">许拥旺</div><input type="hidden" id="V1_CTRL20" name="fieldFGLXXLDshr" value="20041175"></div></div></font></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">审核日期</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff"><font color="#ff0000"><div align="center"><div class="infoplus_labelControlContainer inline" id="label_482a4a18-415c-4053-8592-4ea9cef78628_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%; COLOR: #000000;" title="" class="infoplus_control infoplus_labelControl inline" id="label_482a4a18-415c-4053-8592-4ea9cef78628">2022-09-30</div><input type="hidden" id="V1_CTRL21" name="fieldFGLXXLDshsj" value="1664467200" class="infoplus_fieldChange"></div></div></font></td></tr><tr class="fake"><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(255, 255, 255);" colspan="8"></td></tr><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">申请人确认报备</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div align="left" style="FONT-WEIGHT: normal"><font size="3">你的离校外出申请已获批。请注意以下事项： </font></div><div><font face="微软雅黑" size="3" style="font-family:&#39;PingFang SC&#39;,微软雅黑">1、请关注疫情形势发展，避免前往中高风险地区和封控封闭管理地区；请注意个人健康，途中做好个人防护。</font></div><div><font face="微软雅黑" size="3" style="font-family:&#39;PingFang SC&#39;,微软雅黑">2、离校未出市且外出天数未超过3日的，请在返校时通过本流程及时报告返校情况（网上办事大厅——待提交事项——申请人报告返校情况）。</font></div><div><font face="微软雅黑" size="3" style="font-family:&#39;PingFang SC&#39;,微软雅黑">3、离校出市或者外出天数超过3日的，请在返校前（至少提前24小时）提交返校申请（网上办事大厅——“学生返校申请”流程），获学校批准同意后学生再行返校。</font></div><div><font face="微软雅黑" size="3" style="font-family:&#39;PingFang SC&#39;,微软雅黑">4、如有特殊原因不能按时返校，需延长外出时间，请重新发起离校外出申请（原申请流程应先办结）</font></div><div align="center" style="FONT-WEIGHT: normal"><font size="3"><input type="checkbox" offvalue="false" class="xdBehavior_Boolean infoplus_control infoplus_checkControl infoplus_readonly disabled" title="" id="V1_CTRL157" name="fieldSQRyzx" readonly="" disabled=""><label for="V1_CTRL157" class="infoplus_checkLabel">本人确认已获悉以上注意事项</label></font></div></td></tr><tr class="fake"><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px;" colspan="9"></td></tr><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt; PADDING-RIGHT: 10px" colspan="9"><div align="left" style="FONT-WEIGHT: normal"><font size="3">报告返校情况:<input type="hidden" style="HEIGHT: 30px; WIDTH: 7px" class="infoplus_control infoplus_hiddenControl infoplus_fieldChange" title="" id="V1_CTRL158" name="fieldYCsqrfxqk" readonly="" value=""></font></div></td></tr><tr class="fake"><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(255, 255, 255);" colspan="8"></td></tr><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">是否已返校</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div align="center" style="FONT-WEIGHT: normal"><div><input type="radio" value="1" style="font-size: small; display: none;" name="fieldXJsfyfhxqszd" class="xdBehavior_Boolean infoplus_control infoplus_radioControl validate[funcCall[checkRenderFormFields]] infoplus_fieldChange" title="" id="V1_CTRL152" disabled="disabled"><label for="V1_CTRL152" class="infoplus_radioLabel"><font size="3">已返校&nbsp;&nbsp; &nbsp;&nbsp;</font></label><input type="radio" value="2" style="font-size: small; display: none;" name="fieldXJsfyfhxqszd" class="xdBehavior_Boolean infoplus_control infoplus_radioControl validate[funcCall[checkRenderFormFields]] infoplus_fieldChange" title="" id="V1_CTRL153" disabled="disabled"><label for="V1_CTRL153" class="infoplus_radioLabel"><font size="3">未返校 &nbsp;&nbsp; </font></label><input type="radio" value="3" style="font-size: small; display: none;" name="fieldXJsfyfhxqszd" class="xdBehavior_Boolean infoplus_control infoplus_radioControl validate[funcCall[checkRenderFormFields]] infoplus_fieldChange" title="" id="V1_CTRL154" disabled="disabled"><label for="V1_CTRL154" class="infoplus_radioLabel"><font size="3">行程取消</font></label></div></div></td></tr><tr class="fake"><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px;" colspan="2"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);" colspan="3"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px;" colspan="3"></td></tr><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">返校日期</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px" colspan="2"><div><input type="text" autocomplete="off" style="width: 100%; display: none;" class="infoplus_control infoplus_dateControl validate[funcCall[checkRenderFormFields]]" title="" id="V1_CTRL155" name="fieldFXSJzd" disabled="disabled"></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" colspan="3"><div align="center" style="FONT-WEIGHT: normal"><font size="3">粤康码</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px" colspan="3"><div align="center" style="FONT-WEIGHT: normal"><div style="WIDTH: 100%" title="" class="infoplus_control infoplus_fileControl" id="file_80726ed7-34bd-4d8c-acab-e2bb206df686"><div class="display" style="display: none;"><a target="_blank" href="https://ehall.scnu.edu.cn/infoplus/form/1962429/render#" class="infoplus_fileControl_link"><div class="uploadFileName"></div><div class="uploadFileSize"></div></a><div id="42acab9f-dea3-4137-bdb9-68e48ea28b54" class="infoplus_popMenu top left" style="display: none;"><ul class="horz"><li id="42acab9f-dea3-4137-bdb9-68e48ea28b54_preview" class="infoplus_popMenuItem horz" style="display: none;"><span class="infoplus_popMenuItemIcon"><i class="i-icon-search2"></i></span><span class="infoplus_popMenuItemText">预览</span></li><li id="42acab9f-dea3-4137-bdb9-68e48ea28b54_download" class="infoplus_popMenuItem horz"><a id="42acab9f-dea3-4137-bdb9-68e48ea28b54_download_link" href="https://ehall.scnu.edu.cn/infoplus/form/1962429/render#" target="_blank"><span class="infoplus_popMenuItemIcon"><i class="i-icon-cloud-download"></i></span><span class="infoplus_popMenuItemText">下载</span></a></li></ul></div></div><input type="hidden" id="V1_CTRL117" name="fieldSQRFXYKM" value=""></div></div></td></tr><tr class="fake"><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px;" colspan="2"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(255, 255, 255);" colspan="6"></td></tr><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">行程卡</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px" colspan="2"><div align="center" style="FONT-WEIGHT: normal"><div style="WIDTH: 100%" title="" class="infoplus_control infoplus_fileControl" id="file_39164ea0-d413-4d45-aa94-60e29b1b0c6e"><div class="display" style="display: none;"><a target="_blank" href="https://ehall.scnu.edu.cn/infoplus/form/1962429/render#" class="infoplus_fileControl_link"><div class="uploadFileName"></div><div class="uploadFileSize"></div></a><div id="bde08451-9907-446d-b68e-7cad5c5de699" class="infoplus_popMenu top left" style="display: none;"><ul class="horz"><li id="bde08451-9907-446d-b68e-7cad5c5de699_preview" class="infoplus_popMenuItem horz" style="display: none;"><span class="infoplus_popMenuItemIcon"><i class="i-icon-search2"></i></span><span class="infoplus_popMenuItemText">预览</span></li><li id="bde08451-9907-446d-b68e-7cad5c5de699_download" class="infoplus_popMenuItem horz"><a id="bde08451-9907-446d-b68e-7cad5c5de699_download_link" href="https://ehall.scnu.edu.cn/infoplus/form/1962429/render#" target="_blank"><span class="infoplus_popMenuItemIcon"><i class="i-icon-cloud-download"></i></span><span class="infoplus_popMenuItemText">下载</span></a></li></ul></div></div><input type="hidden" id="V1_CTRL118" name="fieldSWRFXXCK" value=""></div></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="6"><div align="center" style="FONT-WEIGHT: normal"><font size="3"></font>&nbsp;</div></td></tr><tr class="fake"><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(255, 255, 255);" colspan="8"></td></tr><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">未返校原因</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><div align="center" style="FONT-WEIGHT: normal"><div class="infoplus_labelControlContainer" id="label_dac9c550-da54-4ab9-90e0-82d5f882fdea_Container"><div style="width: 100%; min-height: 62px;" title="" class="infoplus_control infoplus_labelControl" id="label_dac9c550-da54-4ab9-90e0-82d5f882fdea"></div><input type="hidden" id="V1_CTRL156" name="fieldSQRQRwfxyy" value=""></div></div></td></tr><tr class="fake"><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(255, 255, 255);" colspan="9"></td></tr><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="9"><font size="3">提示：如有特殊原因不能按时返校，需延长外出时间，请重新发起离校外出申请（原申请流程应先办结）<input type="hidden" style="HEIGHT: 4px; WIDTH: 83px" class="infoplus_control infoplus_hiddenControl infoplus_fieldChange" title="" id="V1_CTRL41" name="fieldYCsqrfxqk" readonly="" value=""></font></td></tr><tr class="fake"><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(255, 255, 255);" colspan="8"></td></tr><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" rowspan="2"><div align="center" style="FONT-WEIGHT: normal"><font size="3">辅导员确认销假 </font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="8"><font color="#ff0000"><div align="left" style="FONT-WEIGHT: normal"><textarea style="height: 54px; width: 100%; min-height: 54px; display: none;" class="infoplus_control infoplus_textareaControl validate[funcCall[checkRenderFormFields]]" title="" id="V1_CTRL184" name="fieldFDYQRXJYJ" autoheight="" disabled="disabled"></textarea></div></font></td></tr><tr class="fake"><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);" class="fake"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(255, 255, 255);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(255, 255, 255);" colspan="4"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(220, 233, 245);"></td><td style="border-width: 0px; border-style: none; border-color: rgb(0, 44, 84); vertical-align: middle; padding: 0px; background-color: rgb(255, 255, 255);"></td></tr><tr dynamic-invisible="true" style="display: none;"><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5" rowspan="1" class="fake"><div align="center" style="FONT-WEIGHT: normal"><font size="3">辅导员确认销假 </font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff"><font size="3"><div align="center" style="FONT-WEIGHT: normal"><input type="hidden" style="WIDTH: 16px" class="infoplus_control infoplus_hiddenControl" title="" id="V1_CTRL106" name="fieldQRFXSJyczd" readonly="" value=""><input type="hidden" style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 82px;" class="infoplus_control infoplus_hiddenControl" title="" id="V1_CTRL55" name="fieldQRFXSJ" readonly="" value=""></div></font></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">确认人</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff" colspan="4"><font color="#ff0000"><div align="center" style="FONT-WEIGHT: normal"><div class="infoplus_labelControlContainer inline" id="label_4d01f7d4-4f9e-414a-a79f-99548dc22dcc_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_4d01f7d4-4f9e-414a-a79f-99548dc22dcc"></div><input type="hidden" id="V1_CTRL56" name="fieldQRFXSJqrr" value=""></div></div></font></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #dce9f5"><div align="center" style="FONT-WEIGHT: normal"><font size="3">确认日期</font></div></td><td style="BORDER-TOP: #002c54 1pt solid; BORDER-RIGHT: #002c54 1pt solid; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #002c54 1pt solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: #002c54 1pt solid; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #ffffff"><div align="center" style="FONT-WEIGHT: normal"><div class="infoplus_labelControlContainer inline" id="label_f61cbefd-3271-4ca8-ab7e-75d93d8accb6_Container"><div style="FONT-SIZE: small;font-family:&#39;PingFang SC&#39;,微软雅黑; WIDTH: 100%;" title="" class="infoplus_control infoplus_labelControl inline" id="label_f61cbefd-3271-4ca8-ab7e-75d93d8accb6"></div><input type="hidden" id="V1_CTRL57" name="fieldQRFXSJqrrq" value="" class="infoplus_fieldChange"></div></div></td></tr></tbody></table></div></td></tr></tbody></table></div><div align="center"></div></div><div id="variables_container"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_EXECUTE_INDEP_ORGANIZE_Name" name="_VAR_EXECUTE_INDEP_ORGANIZE_Name" value="华南师范大学"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ACTION_INDEP_ORGANIZES_Codes" name="_VAR_ACTION_INDEP_ORGANIZES_Codes" value="10574"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ACTION_REALNAME" name="_VAR_ACTION_REALNAME" value="郝世宽"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ACTION_ORGANIZE" name="_VAR_ACTION_ORGANIZE" value="175"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_EXECUTE_ORGANIZE" name="_VAR_EXECUTE_ORGANIZE" value="175"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ACTION_INDEP_ORGANIZE" name="_VAR_ACTION_INDEP_ORGANIZE" value="10574"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ACTION_INDEP_ORGANIZE_Name" name="_VAR_ACTION_INDEP_ORGANIZE_Name" value="华南师范大学"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ACTION_ORGANIZE_Name" name="_VAR_ACTION_ORGANIZE_Name" value="人工智能学院"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_EXECUTE_ORGANIZES_Names" name="_VAR_EXECUTE_ORGANIZES_Names" value="人工智能学院"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_OWNER_ORGANIZES_Codes" name="_VAR_OWNER_ORGANIZES_Codes" value="175"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ADDR" name="_VAR_ADDR" value="10.191.78.246"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_LAST_ACTION" name="_VAR_LAST_ACTION" value="action1"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_OWNER_ORGANIZES_Names" name="_VAR_OWNER_ORGANIZES_Names" value="人工智能学院"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_URL" name="_VAR_URL" value="https://ehall.scnu.edu.cn/infoplus/form/1962429/render"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_EXECUTE_ORGANIZE_Name" name="_VAR_EXECUTE_ORGANIZE_Name" value="人工智能学院"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_RELEASE" name="_VAR_RELEASE" value="true"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_TODAY" name="_VAR_TODAY" value="1666368000"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_NOW_MONTH" name="_VAR_NOW_MONTH" value="10"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ACTION_USERCODES" name="_VAR_ACTION_USERCODES" value="2022024921"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_URL_Name" name="_VAR_URL_Name" value="https://ehall.scnu.edu.cn/infoplus/form/XSQJBBSQ/start?membership=wechat_enterprise&amp;showRemark=true&amp;back=1&amp;x_posted=true"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ACTION_ACCOUNT" name="_VAR_ACTION_ACCOUNT" value="2022024921"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ACTION_INDEP_ORGANIZES_Names" name="_VAR_ACTION_INDEP_ORGANIZES_Names" value="华南师范大学"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_OWNER_ACCOUNT" name="_VAR_OWNER_ACCOUNT" value="2022024921"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ACTION_ORGANIZES_Names" name="_VAR_ACTION_ORGANIZES_Names" value="人工智能学院"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_STEP_CODE" name="_VAR_STEP_CODE" value="step10"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_OWNER_USERCODES" name="_VAR_OWNER_USERCODES" value="2022024921"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_EXECUTE_ORGANIZES_Codes" name="_VAR_EXECUTE_ORGANIZES_Codes" value="175"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_NOW_DAY" name="_VAR_NOW_DAY" value="22"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_OWNER_REALNAME" name="_VAR_OWNER_REALNAME" value="郝世宽"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ENTRY_TAGS" name="_VAR_ENTRY_TAGS" value="02-学生服务,研究生,本科生"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_NOW" name="_VAR_NOW" value="1666440157"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_PARTICIPANTS" name="_VAR_PARTICIPANTS" value=",2022024921,20219232,20041175,"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_URL_Attr" name="_VAR_URL_Attr" value="{&quot;membership&quot;:&quot;wechat_enterprise&quot;,&quot;showRemark&quot;:&quot;true&quot;,&quot;back&quot;:&quot;1&quot;,&quot;x_posted&quot;:&quot;true&quot;}"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ENTRY_NUMBER" name="_VAR_ENTRY_NUMBER" value="679530"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_EXECUTE_INDEP_ORGANIZES_Names" name="_VAR_EXECUTE_INDEP_ORGANIZES_Names" value="华南师范大学"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ENTRY_NAME" name="_VAR_ENTRY_NAME" value="学生离校外出申请_郝世宽_人工智能学院_[广州市]_[海珠区]__2022级"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_STEP_NUMBER" name="_VAR_STEP_NUMBER" value="1962429"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_POSITIONS" name="_VAR_POSITIONS" value="175:30:2022024921"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ACTION_PHONE" name="_VAR_ACTION_PHONE" value="13925132921"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_EXECUTE_INDEP_ORGANIZES_Codes" name="_VAR_EXECUTE_INDEP_ORGANIZES_Codes" value="10574"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_EXECUTE_POSITIONS" name="_VAR_EXECUTE_POSITIONS" value="175:30:2022024921"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_ACTION_ORGANIZES_Codes" name="_VAR_ACTION_ORGANIZES_Codes" value="175"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_EXECUTE_INDEP_ORGANIZE" name="_VAR_EXECUTE_INDEP_ORGANIZE" value="10574"><input type="hidden" class="infoplus_control infoplus_hiddenControl infoplus_var" id="_VAR_NOW_YEAR" name="_VAR_NOW_YEAR" value="2022"></div></div>
+    </div>
+    <!-- 5.the holder for form remark renderer -->
+        <div id="form_remark_holder" class="form_remark_holder shadow round-corner" align="center" style="position: relative; display: block; width: 920px;"><ul><li class="remark_item" style="display: block; border-bottom: none;"><div class="form_remark_title"><span class="color_b2" style=""><span class=""><b>您(郝世宽)</b></span>   填写/办理了<b><a target="_blank" title="查看该环节表单的快照" href="https://ehall.scnu.edu.cn/infoplus/form/1962429/render?snapshot=true">申请人确认</a></b>(<span class="color_b3"><b>确认</b></span>)</span><span class="form_remark_time" title="指派时间:2022/09/30 09:34  办理时间:2022/09/30 09:36">2022/09/30 09:36</span></div></li><div class="lastMore"><div style="height: 0px;"><span class="moreHistory" title="点击展开历史"><i class="i-icon-angle-double-down"></i> 点击展开3个较早历史</span></div></div><li class="remark_item" style="display: none;"><div class="form_remark_title"><span class="color_b2" style=""><span class=""><b>许拥旺</b></span>   填写/办理了<b><a target="_blank" title="查看该环节表单的快照" href="https://ehall.scnu.edu.cn/infoplus/form/1961974/render?snapshot=true">二级学院审核意见</a></b>(<span class="color_b3"><b>通过</b></span>)</span><span class="form_remark_time" title="指派时间:2022/09/30 09:31  办理时间:2022/09/30 09:34">2022/09/30 09:34</span></div></li><li class="remark_item" style="display: none;"><div class="form_remark_title"><span class="color_b2" style=""><span class=""><b>周裕权</b></span>   填写/办理了<b><a target="_blank" title="查看该环节表单的快照" href="https://ehall.scnu.edu.cn/infoplus/form/1927259/render?snapshot=true">辅导员意见</a></b>(<span class="color_b3"><b>通过</b></span>)</span><span class="form_remark_time" title="指派时间:2022/09/29 15:43  办理时间:2022/09/30 09:31">2022/09/30 09:31</span></div></li><li class="remark_item" style="display: none; border-bottom: none;"><div class="form_remark_title"><span class="color_b2" style=""><span class=""><b>您(郝世宽)</b></span>   填写/办理了<b><a target="_blank" title="查看该环节表单的快照" href="https://ehall.scnu.edu.cn/infoplus/form/1926871/render?snapshot=true">填写申请</a></b>(<span class="color_b3"><b>提交申请</b></span>)</span><span class="form_remark_time" title="指派时间:2022/09/29 15:35  办理时间:2022/09/29 15:43">2022/09/29 15:43</span></div></li></ul></div>
+    </div>
+
+</div>
+    </form>
+<div id="master_footer"><div id="div_footer_copy_containers"><div style="height:1px;background-color:#999999"></div><div style="height:1px;background-color:#FFFFFF"></div><div id="div_footer_copy_content">Copyright 2022 South China Normal University. All Rights Reserved/华南师范大学 版权所有</div></div></div></div>
+<script language="JavaScript">
+    //如果发现在iframe里面就加载iframe.css，主要解决jquery的offset计算错误的问题
+    if (self !== top) {
+        var link = document.createElement('link');
+        link.setAttribute("rel", "stylesheet");
+        link.setAttribute("type", "text/css");
+        link.setAttribute("href", "/infoplus/static/css/iframe.css?v=20211117-171841");
+        document.getElementsByTagName("head")[0].appendChild(link);
+    }
+</script>
+
+<script type="text/javascript" src="./申请人确认 - 学生离校外出申请_files/lib.js.下载"></script>
+<script type="text/javascript" src="./申请人确认 - 学生离校外出申请_files/lang_zh.js.下载"></script>
+    <script type="text/javascript">
+    var googleAnalysis = function () {
+        
+    };
+
+
+    
+    var entrusts = {"entrustee":{"account":"2022024921","email":"","phone":"","title":"","memberships":{"":{"id":"2022024921","name":"2022024921","memberId":"2022024921","domain":"bcb50ba1-5add-11e9-856e-506b8d2b09f2"}},"id":"02382f44-0040-11ed-be82-506b8d463e6c","name":"郝世宽"},"entrusted":false};
+    
+
+
+    var progressFlag = null;
+
+    //判断是否是移动端APP请求
+    var isMobileApp = function () {
+        return navigator.userAgent.match(/TaskCenterApp/);
+    };
+
+    var progress = function (content, percent, targetPercent, waitMillisecond) {
+
+        if (isMobileApp()) {
+            return;
+        }
+
+        var showPercent = function (p, waitingTimes) {
+            $("#div_loader_progress_percent").css("right", (100 - p) + "%");
+            var $loaderTextDiv = $("#div_loader_text");
+            var $loaderText = $loaderTextDiv.children(".content");
+            $loaderTextDiv.children(".waiting").remove();
+            $loaderText.text(content + "(" + p + "%)");
+
+            if (waitingTimes != null) {
+                //超过3秒再显示请耐心等待
+                var waitingString = waitingTimes > 60 ? '请耐心等待' : '';
+                for (var i = 0, len = Math.floor(waitingTimes / 3) % 6; i < len; i++) {
+                    waitingString += '.';
+                }
+                if ($loaderTextDiv.children(".waiting").length == 0) {
+                    var span = document.createElement("span");
+                    $(span).addClass("waiting").text(waitingString);
+                    $loaderTextDiv.append(span);
+                } else {
+                    $loaderTextDiv.children(".waiting").text(waitingString);
+                }
+            }
+
+            var $loader = $("#div_loader");
+            if (!$loader.is(":visible")) {
+                $loader.show();
+            }
+
+        };
+
+        if (progressFlag != null) {
+            clearInterval(progressFlag);
+        }
+
+        showPercent(percent);
+
+        if (targetPercent != null) {
+            var frames = 20,
+                currentPercent = percent,
+                percentStep = (targetPercent - percent) / frames,
+                waitingTimes = 0;
+            var wait = waitMillisecond == null ? 1000 : waitMillisecond;
+
+            progressFlag = setInterval(function () {
+                currentPercent += percentStep;
+                currentPercent = Math.floor(currentPercent);
+                if (currentPercent > targetPercent) {
+                    waitingTimes++;
+                    //showPercent(targetPercent, waitingTimes);
+                    showPercent(targetPercent);
+                } else {
+                    showPercent(currentPercent);
+                }
+
+            }, wait / frames)
+        }
+    };
+
+    var loadFormError = function () {
+        if (progressFlag != null) {
+            clearInterval(progressFlag);
+        }
+
+        var title = "加载流程失败",
+            $loaderTextDiv = $("#div_loader_text"),
+            $loaderText = $loaderTextDiv.children(".content");
+        $loaderTextDiv.children(".waiting").remove();
+        $loaderText.text(title);
+        $("#div_loader_progress_percent").css("right", "0").css("background-color", "red");
+    };
+
+    var workflowId, formStepId, instanceId;
+    
+    formStepId = 1962429;
+    instanceId = "";
+    workflowId = null;
+    
+
+    var instanceView = false;
+    
+    var adminView = false;
+    
+
+
+    var transformer = null;
+
+
+    var setInitRemarkWidth = function () {
+        //非移动版初始时候设置历史宽度）
+        if (!$$.MOBILE) {
+            var flag = setInterval(function () {
+                var width = $("#render_holder")[0].clientWidth;
+                if (width > 0) {
+                    //不设置宽度的话，如果历史备注比较长会撑大整个DIV
+                    //如果全部的view都是自动宽度，那么remarkholder宽度设成100%，不需要这里再设置了
+                    if (!$$.params.allAutoWidth) {
+                        $$.params.holder.remark.css("width", width + "px");
+                    } else {
+                        $$.params.holder.remark.css("width", "100%");
+                    }
+                    clearInterval(flag);
+                    $$.params.currentWidth = width;
+                    $$.resize(width);
+                }
+            }, 100);
+
+        }
+    };
+
+    var startLoad = function () {
+
+        transformer.load().done(function () {
+
+            setInitRemarkWidth();
+            transformer.registerGlobalEvents();
+
+            //渲染完毕
+            progress($$.lt("load.finish"), 100);
+
+            //如果是被嵌入在移动app中，那么调用webViewInterface函数
+            if (isMobileApp()) {
+                if (window['webViewInterface'] !== undefined && window['webViewInterface']['loaded'] !== undefined) {
+                    try {
+                        webViewInterface.loaded();
+                    } catch (ignore) {
+                    }
+                }
+            }
+
+            setTimeout(switchView, 0);
+
+            
+
+            //触发ready事件
+            $$.ready();
+
+            googleAnalysis();
+
+        });
+    };
+
+    var startPreview = function () {
+        var previewConfig = {
+            app: {
+                
+                iconUrl: "/infoplus/static/img/default_workflow_icon.png",
+                
+                iconPalette: "",
+                name: "",
+                department: "",
+                contact: "",
+                rating:0,
+                rated:0
+            },
+            release: "",
+            idc: "",
+            
+            clear:false,
+            
+            startable: false
+        };
+
+        transformer.preview(previewConfig).done(function () {
+            //渲染完毕
+            /*
+            if (!$$.MOBILE) {
+                setInitRemarkWidth();
+            } else {
+                $$.resize($(window).width());
+            }
+            */
+            setInitRemarkWidth();
+            transformer.registerGlobalEvents();
+
+
+            //如果是被嵌入在移动app中，那么调用webViewInterface函数
+            if (isMobileApp()) {
+                if (window['webViewInterface'] !== undefined && window['webViewInterface']['loaded'] !== undefined) {
+                    try {
+                        webViewInterface.loaded();
+                    } catch (ignore) {
+                    }
+                }
+            }
+
+            setTimeout(switchView, 0);
+
+            //触发ready事件
+            $$.ready();
+
+            googleAnalysis();
+        });
+    };
+
+    var loadTransformer = function () {
+
+        initGlobalVariable();
+
+        if ($$.MOBILE) {
+            var width = $(window).width();
+            if (width > 0) {
+                $("#form_remark_holder").css("width", width + "px");
+                $("#form_holder").css("width", width + "px");
+            }
+        }
+
+        var $commandHolder = $("#command_holder");
+
+        transformer = new InfoPlus.Transformer({
+            formStepId: formStepId,
+            instanceId: instanceId,
+            workflowId: workflowId,
+            instanceView: instanceView,
+            adminView: adminView,
+            
+            userId: "02382f44-0040-11ed-be82-506b8d463e6c",
+            account: "2022024921",
+            tenantId: "ed4da427-efd6-4a42-a9fd-beef9929f71d",
+            tenantDomain: "scnu.edu.cn",
+            synthesizeEmail:false,
+            tenantTimeZoneOffset: 28800,
+            tenantReadOnlyStyle: "Label",
+            lang: "zh",
+            
+            entrusts: entrusts,
+            
+            url_print: "/infoplus/form/1962429/print",
+            url_download_pdf: "/infoplus/form/1962429/export.pdf",
+            url_download_word: "/infoplus/form/1962429/export.docx",
+            
+            url_reLogin: "/infoplus/form/reLogin",
+            lib_ckeditor: "/infoplus/static/js/lib/ck/ckeditor.js",
+
+            interface_render: "/infoplus/interface/render",
+            interface_preview: "/infoplus/interface/preview",
+            interface_start: "/infoplus/interface/start",
+            interface_list_remarks: "/infoplus/interface/instance/{id}/progress",
+            interface_list_next_steps: "/infoplus/interface/listNextStepsUsers",
+            interface_do_action: "/infoplus/interface/doAction",
+            interface_withdraw: "/infoplus/interface/withdraw",
+            interface_kill: "/infoplus/interface/kill",
+            interface_delete_attachment: "/infoplus/interface/deleteAttachment",
+            interface_save: "/infoplus/interface/save",
+            interface_fieldChange: "/infoplus/interface/fieldChanging",
+            interface_buttonClick: "/infoplus/interface/fieldChanging",
+            interface_suggest: "/infoplus/interface/suggest",
+            interface_suggestInitialize: "/infoplus/interface/suggestInitialize",
+            interface_thing: "/infoplus/interface/thing",
+            interface_printInvoice: "",
+            
+            interface_filePreviewUrl: "https://ehall.scnu.edu.cn/online/op/embed.aspx?src=%s",
+            interface_wordEditUrl: "/infoplus/form/%1/field/%2/wopi/edit?mime=%mime&fileUri=%uri&path=%path",
+            interface_wordDownUrl: "/infoplus/form/%1/field/%2/wopi/down?mime=%mime&fileUri=%uri&path=%path",
+            
+            interface_sealSelector: "/infoplus/form/%1/field/%2/seal/selector?path=%path",
+            interface_entrust: "/infoplus/interface/entrust",
+            interface_users: "/infoplus/interface/suggest",
+            interface_compare: "/infoplus/interface/data",
+            interface_ckUploadImage: "/infoplus/interface/ckUploadImage",
+            interface_changePriority: "/infoplus/interface/priority",
+            interface_attachment: "/infoplus/interface/attachment",
+            interface_attachmentToken: "/infoplus/interface/attachmentToken",
+            interface_graphql: "/infoplus/apis/v3",
+            
+            copyright: '<span class="copyright">&copy;</span> 2009 - 2021. 华南师范大学(scnu.edu.cn), All rights reserved. Version 20211117-171841',
+            
+            base_url: '/infoplus/'
+
+        });
+
+        //transformer.registerGlobalEvents();
+
+
+        //参数上要求弹出委托对话框或者不存在委托(调试)人情况下，显示委托选人对话框
+        if (transformer.entrust === "true" && !(transformer.entrusts != null && transformer.entrusts.entruster != null)) {
+            $IU.chooseEntrust(transformer.entrusts, null, ($$.PREVIEW ? startPreview : startLoad), transformer.interface_entrust);
+        } else {
+            if ($$.PREVIEW) {
+                startPreview();
+            } else {
+                startLoad();
+            }
+        }
+
+    };
+
+    //var __file__ = null;
+    var loadScriptCallback = function () {
+        loadTransformer();
+    };
+
+    
+
+    $(document).ready(function () {
+        
+        if (checkBrowser()) {
+            
+            if (entrusts.entruster == null) {
+                progress(InfoPlus.Language.load.loadPage, 0, 20, 1000);
+            }
+            
+            loadScript();
+        }
+        
+    });
+
+</script>
+
+<script type="text/javascript">
+    var loadScript = function () {
+
+        var jsFiles;
+        
+        jsFiles = [
+            [
+                "/infoplus/static/js/Release/render.min.js?v=20211117-171841"
+            ]
+        ];
+        
+        jsFiles.push([
+            "https://ehall.scnu.edu.cn/infoplus/static/themes/default/desktop/js/desktop.js?v=20211117-171841",
+        ]);
+        
+        jsFiles.push([
+            "https://ehall.scnu.edu.cn/infoplus/static/themes/scnu-new/desktop/js/render/desktop.js?v=20211117-171841",
+        ]);
+        
+        loadScriptSeq(jsFiles, loadScriptCallback);
+        
+
+
+    };
+</script>
+<div id="div_invoice"></div>
+<iframe id="alive" src="./申请人确认 - 学生离校外出申请_files/alive.html" style="display: none; border:0">unsupported.</iframe>
+
+
+
+<div id="float_tool" class="floatTool"><div><div class="contact button z-depth-1"><i class="i-icon-feedback"></i><span class="help_span">帮助</span><div class="contactWrapDiv"><div class="contactContentDiv round-corner z-depth-1"><div class="contactContent"><div class="contactTitle"><span class="iconSpan"><i class="i-icon-assignment"></i></span><span class="titleSpan">学生离校外出申请</span><span class="entrySpan">流水号：679530</span></div><div class="contactContact"><div class="department">主管部门：学工部,研究生院</div><div class="contactStyle">联系方式：</div></div><div class="feedback"><a>填表说明</a></div></div></div></div><div class="hoverDiv"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>求助反馈</td></tr></tbody></table></div></div></div><div id="toTop" class="button z-depth-1" style="display: none;"><i class="i-icon-publish"></i><span class="help_span">置顶</span><div class="hoverDiv">回到顶端</div></div></div></body></html>
